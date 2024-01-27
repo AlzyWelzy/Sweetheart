@@ -24,11 +24,12 @@ body {
   justify-content: center;
   text-align: center;
   margin-top: 2rem;
+  height: 100vh;
 }
 
 .title {
   text-align: center;
-  font-size: 3rem;
+  font-size: 7rem;
   font-weight: 700;
 }
 
@@ -50,11 +51,11 @@ body {
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 1.6rem;
+  margin: 0.4rem 0.2rem;
   cursor: pointer;
   border: none;
-  border-radius: 12px;
+  border-radius: 1.2rem;
   transition: background-color 0.3s ease;
   transition: transform 0.3s ease;
 }
