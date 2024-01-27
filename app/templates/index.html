@@ -10,6 +10,10 @@
     method="POST"
     class="d-flex align-items-center justify-content-between w-25"
   >
+    {% csrf_token %}
+
+    <input type="hidden" name="name" class="form-control" id="name" value="" />
+
     <button type="submit" name="response" value="True" class="btn btn-success">
       ❤️ Yes
     </button>
@@ -17,5 +21,13 @@
       💔 No
     </button>
   </form>
+
+  <script>
+    // Prompt the user for their name
+    var name = prompt("Please enter your name:");
+
+    // Set the value of the hidden input field
+    document.getElementById("name").value = name;
+  </script>
 </main>
 {% endblock %}
