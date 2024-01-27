@@ -1,4 +1,4 @@
-# Django Project Template
+# Sweetheart
 
 Welcome to Sweetheart - Where Every Response Tells a Love Story
 
