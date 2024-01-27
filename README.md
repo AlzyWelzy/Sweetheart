@@ -1,6 +1,6 @@
 # Django Project Template
 
-Welcome to the Your_Project_Name repository!
+Welcome to Sweetheart - Where Every Response Tells a Love Story
 
 ## Getting Started
 
@@ -20,13 +20,13 @@ Follow these steps to get a development environment up and running.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-project.git
+   git clone https://github.com/alzywelzy/sweetheart.git
    ```
 
 2. Move into the project directory:
 
    ```bash
-   cd your-project
+   cd sweetheart
    ```
 
 3. Create a virtual environment:
@@ -70,5 +70,3 @@ Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details on our code of 
 ## License
 
 This project is licensed under the [AGPL-3.0] - see the LICENSE.md file for details.
-
-> Make sure to replace `Your_Project_Name`, `https://github.com/your-username/your-project.git`, `[License Name]`, and other placeholders with the appropriate values for your project. Additionally, you may want to customize the content further based on your project's specifics.
