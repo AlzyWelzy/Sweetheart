@@ -58,3 +58,30 @@ body {
   background-color: #ff69b4;
   transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  .main {
+    height: auto;
+    padding: 2rem;
+  }
+
+  .proposalForm {
+    width: 20rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+  }
+
+  .btn:hover {
+    transform: scale(1);
+  }
+
+  .proposalHeading {
+    font-size: 3rem;
+  }
+}
