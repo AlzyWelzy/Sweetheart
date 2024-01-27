@@ -3,16 +3,23 @@
   class="d-flex flex-column align-items-center justify-content-center text-center"
   style="margin-top: 20px"
 >
-  <h1>Do you want to go out with me?</h1>
+  <h1 id="proposalHeading">Do you want to go out with me?</h1>
   <img src="{% static 'img/proposal.webp' %}" alt="Please go out with me 🙏" />
   <form
     action=""
     method="POST"
     class="d-flex align-items-center justify-content-between w-25"
+    id="proposalForm"
   >
     {% csrf_token %}
 
-    <input type="hidden" name="name" class="form-control" id="name" value="" />
+    <input
+      type="hidden"
+      name="name"
+      class="form-control"
+      id="username"
+      value=""
+    />
 
     <button type="submit" name="response" value="True" class="btn btn-success">
       ❤️ Yes
@@ -22,12 +29,7 @@
     </button>
   </form>
 
-  <script>
-    // Prompt the user for their name
-    var name = prompt("Please enter your name:");
-
-    // Set the value of the hidden input field
-    document.getElementById("name").value = name;
-  </script>
+  <script></script>
 </main>
+
 {% endblock %}
