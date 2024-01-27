@@ -4,14 +4,10 @@ function setProposalHeading(username) {
 }
 
 function promptName() {
-  let username = null;
+  let username = "";
 
   while (username == null || username == "") {
     username = prompt("Please enter your name:");
-  }
-
-  if (username == null || username == "") {
-    return promptName();
   }
 
   document.getElementById("username").value = username;
