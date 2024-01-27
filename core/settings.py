@@ -63,6 +63,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = "core.urls"
@@ -148,14 +149,22 @@ STATIC_URL = "static/"
 #     BASE_DIR / "static",
 # ]
 
-# STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", "static")
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", "static")
 
 
 # MEDIA_URL = "/media/"
 # MEDIA_ROOT = BASE_DIR / "public/static"
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+# Add your static files directories to the STATICFILES_DIRS setting
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
