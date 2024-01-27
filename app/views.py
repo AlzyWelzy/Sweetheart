@@ -15,3 +15,7 @@ def index(request):
             return render(request, "no_page.html", {"name": name})
 
     return render(request, "index.html")
+
+
+def error(request):
+    return redirect("index")
