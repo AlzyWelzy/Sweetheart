@@ -13,8 +13,8 @@ def index(request):
             return render(request, "yes_page.html", {"name": name})
         else:
             return render(request, "no_page.html", {"name": name})
-
-    return render(request, "index.html")
+    else:
+        return render(request, "index.html")
 
 
 def error(request):
