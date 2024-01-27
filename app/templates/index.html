@@ -1,16 +1,8 @@
 {% extends "base.html" %} {% block content %} {% load static %}
-<main
-  class="d-flex flex-column align-items-center justify-content-center text-center"
-  style="margin-top: 20px"
->
-  <h1 id="proposalHeading">Do you want to go out with me?</h1>
+<main class="main">
+  <h1 id="proposalHeading" class="title">Do you want to go out with me?</h1>
   <img src="{% static 'img/proposal.webp' %}" alt="Please go out with me 🙏" />
-  <form
-    action=""
-    method="POST"
-    class="d-flex align-items-center justify-content-between w-25"
-    id="proposalForm"
-  >
+  <form action="" method="POST" class="proposalForm" id="proposalForm">
     {% csrf_token %}
 
     <input

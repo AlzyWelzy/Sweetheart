@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,700&display=swap");
-/* * {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -10,25 +10,38 @@ html {
 }
 
 body {
-  font-family: "Roboto Mono", sans-serif;
+  font-family: "Nunito", sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #000;
+  color: white;
+  background-color: #f8c8dc;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .title {
   text-align: center;
   font-size: 3rem;
-} */
-
-body {
-  background-color: #f8c8dc;
+  font-weight: 700;
 }
 
-h1 {
-  color: white;
+/* h1 {
   font-family: "Nunito", sans-serif;
   font-weight: 700;
+} */
+
+.proposalForm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 25rem;
 }
 
 .btn {
@@ -43,4 +56,10 @@ h1 {
   border: none;
   border-radius: 12px;
   transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff69b4;
+  transform: scale(1.1);
 }
