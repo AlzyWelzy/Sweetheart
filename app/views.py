@@ -26,7 +26,7 @@ def yes_page(request, name):
         proposal = Proposal.objects.get(name=name)
         proposal.email = email
         proposal.save()
-        redirect("yes_page", name=name)
+        return redirect("yes_page", name=name)
     return render(request, "yes_page.html", {"name": name})
 
 
