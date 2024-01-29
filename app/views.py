@@ -13,25 +13,31 @@ def index(request):
         )
 
         if response == "Yes":
-            return redirect("yes_page", name=name)
+            return redirect("yes_page", user_identifier=proposal.user_identifier)
         else:
-            return redirect("no_page", name=name)
+            return redirect("no_page", user_identifier=proposal.user_identifier)
 
     return render(request, "index.html")
 
 
-def yes_page(request, name):
+def yes_page(request, user_identifier):
+    proposal = Proposal.objects.get(user_identifier=user_identifier)
     if request.method == "POST":
         email = request.POST.get("email")
-        proposal = Proposal.objects.get(name=name)
+
         proposal.email = email
         proposal.save()
-        return redirect("yes_page", name=name)
-    return render(request, "yes_page.html", {"name": name})
+
+    return render(
+        request, "yes_page.html", {"proposal": proposal, "name": proposal.name}
+    )
 
 
-def no_page(request, name):
-    return render(request, "no_page.html", {"name": name})
+def no_page(request, user_identifier):
+    proposal = Proposal.objects.get(user_identifier=user_identifier)
+    return render(
+        request, "no_page.html", {"proposal": proposal, "name": proposal.name}
+    )
 
 
 def error(request):
