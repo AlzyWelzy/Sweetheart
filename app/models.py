@@ -14,6 +14,8 @@ class Proposal(models.Model):
 
     timestamp = models.DateTimeField(auto_now_add=True)
 
+    email = models.EmailField(null=True, blank=True, max_length=254)
+
     def __str__(self):
         return f"{self.name} said {self.response} at {self.timestamp}"
 

@@ -3,6 +3,14 @@
   <h1 id="proposalHeading" class="title">
     {{ name }}, that's wonderful! Let's plan something special.
   </h1>
+
+  <form action="" method="POST" class="emailForm" id="emailForm">
+    {% csrf_token %}
+
+    <input type="email" name="email" id="email" class="email" value="" />
+    <button type="submit" class="btn">❤️</button>
+  </form>
+
   <img src="{% static 'img/yes_response.gif' %}" alt="I love you" />
 </main>
 {% endblock %}
