@@ -33,7 +33,6 @@ DEBUG = (
     DEBUG.lower() == "true"
 )  # Convert to boolean by comparing with the string "true"
 
-# DEBUG = False
 
 ALLOWED_HOSTS = ast.literal_eval(os.environ.get("ALLOWED_HOSTS"))
 
@@ -146,25 +145,11 @@ USE_TZ = True
 STATIC_URL = "static/"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",
-# ]
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", "static")
-
-
-# MEDIA_URL = "/media/"
-# MEDIA_ROOT = BASE_DIR / "public/static"
-
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
-# Add your static files directories to the STATICFILES_DIRS setting
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, "static"),
-# ]
 
 
 # Default primary key field type
