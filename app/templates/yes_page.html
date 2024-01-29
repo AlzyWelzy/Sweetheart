@@ -7,8 +7,16 @@
   <form action="" method="POST" class="emailForm" id="emailForm">
     {% csrf_token %}
 
-    <input type="email" name="email" id="email" class="email" value="" />
-    <button type="submit" class="btn">❤️</button>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      class="email"
+      value=""
+      placeholder="Your email, where love notes await ❤️"
+      required
+    />
+    <button type="submit" class="btn">Send 💌</button>
   </form>
 
   <img src="{% static 'img/yes_response.gif' %}" alt="I love you" />

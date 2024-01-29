@@ -48,10 +48,12 @@ body {
 }
 
 .email {
-  padding: 1rem;
+  width: 25%;
+  padding: 1rem 3.2rem;
   border: 0.1rem solid #ffb6c1;
   border-radius: 1.2rem;
   font-size: 1.6rem;
+  margin: 0.4rem 0.2rem;
 }
 
 .btn {
