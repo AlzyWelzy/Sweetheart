@@ -10,10 +10,10 @@ class Proposal(models.Model):
     # )
 
     response = models.CharField(max_length=3)
-    timestamp = models.DateTimeField(auto_now_add=True)
+    # timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.name} said {self.response} at {self.timestamp}"
+        return f"{self.name} said {self.response}"
 
 
 admin.site.register(Proposal)
