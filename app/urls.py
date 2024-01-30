@@ -3,8 +3,8 @@ from .views import *
 
 main_site = [
     path("", index, name="index"),
-    path("<uuid:user_identifier>/yes/", yes_page, name="yes_page"),
-    path("<uuid:user_identifier>/no/", no_page, name="no_page"),
+    path("yes/", yes_page, name="yes_page"),
+    path("no/", no_page, name="no_page"),
     re_path(r"^.*/$", error, name="error"),
 ]
 
