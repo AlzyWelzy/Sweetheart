@@ -31,33 +31,39 @@ def index(request):
 def yes_page(request):
     user_identifier = request.session.get("user_identifier")
 
-    proposal = Proposal.objects.get(user_identifier=user_identifier)
+    try:
+        proposal = Proposal.objects.get(user_identifier=user_identifier)
 
-    context = {
-        "name": proposal.name,
-    }
+        context = {
+            "name": proposal.name,
+        }
 
-    print(context)
-    if request.method == "POST":
-        email = request.POST.get("email")
+        if request.method == "POST":
+            email = request.POST.get("email")
 
-        proposal.email = email
-        proposal.save()
+            proposal.email = email
+            proposal.save()
 
-    return render(request, "yes_page.html", context)
+        return render(request, "yes_page.html", context)
+
+    except Proposal.DoesNotExist:
+        return redirect("error")
 
 
-def no_page(request, name):
+def no_page(request):
     user_identifier = request.session.get("user_identifier")
 
-    proposal = Proposal.objects.get(user_identifier=user_identifier)
+    try:
+        proposal = Proposal.objects.get(user_identifier=user_identifier)
 
-    context = {
-        "name": proposal.name,
-    }
+        context = {
+            "name": proposal.name,
+        }
 
-    print(context)
-    return render(request, "no_page.html", context)
+        return render(request, "no_page.html", context)
+
+    except Proposal.DoesNotExist:
+        return redirect("error")
 
 
 def error(request):
