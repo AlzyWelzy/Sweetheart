@@ -32,9 +32,7 @@ def get_proposal_by_user_identifier(user_identifier):
 def get_proposal_or_redirect(request):
     user_identifier = request.session.get("user_identifier")
 
-    proposal = get_proposal_by_user_identifier(user_identifier)
-
-    if proposal:
+    if proposal := get_proposal_by_user_identifier(user_identifier):
         return proposal
     else:
         return redirect("error")

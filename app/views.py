@@ -13,11 +13,7 @@ def index(request):
 
         proposal = create_proposal(name, response, user_identifier)
 
-        if response == "Yes":
-            return redirect("yes_page")
-        else:
-            return redirect("no_page")
-
+        return redirect("yes_page") if response == "Yes" else redirect("no_page")
     return render(request, "index.html")
 
 
