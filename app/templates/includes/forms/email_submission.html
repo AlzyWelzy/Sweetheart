@@ -1,0 +1,14 @@
+<form action="" method="POST" class="emailForm" id="emailForm">
+  {% csrf_token %}
+
+  <input
+    type="email"
+    name="email"
+    id="email"
+    class="email"
+    value=""
+    placeholder="Your email, where love notes await ❤️"
+    required
+  />
+  <button type="submit" class="btn btn-email">Send 💌</button>
+</form>

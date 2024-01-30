@@ -1,23 +1,10 @@
 {% extends "base.html" %} {% block content %} {% load static %}
-<main class="main" style="margin-top: 20px">
+<main class="main">
   <h1 id="proposalHeading" class="title">
     {{ name }}, that's wonderful! Let's plan something special.
   </h1>
 
-  <form action="" method="POST" class="emailForm" id="emailForm">
-    {% csrf_token %}
-
-    <input
-      type="email"
-      name="email"
-      id="email"
-      class="email"
-      value=""
-      placeholder="Your email, where love notes await ❤️"
-      required
-    />
-    <button type="submit" class="btn btn-email">Send 💌</button>
-  </form>
+  {% include "includes/forms/email_submission.html" %}
 
   <img src="{% static 'img/yes_response.gif' %}" alt="I love you" />
 </main>

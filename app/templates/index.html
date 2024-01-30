@@ -2,22 +2,7 @@
 <main class="main">
   <h1 id="proposalHeading" class="title">Do you want to go out with me?</h1>
   <img src="{% static 'img/proposal.webp' %}" alt="Please go out with me 🙏" />
-  <form action="" method="POST" class="proposalForm" id="proposalForm">
-    {% csrf_token %}
-
-    <input
-      type="hidden"
-      name="name"
-      class="form-control"
-      id="username"
-      value="{{ name }}"
-    />
-
-    <button type="submit" name="response" value="Yes" class="btn">
-      ❤️ Yes
-    </button>
-    <button type="submit" name="response" value="No" class="btn">💔 No</button>
-  </form>
+  {% include "includes/forms/response_form.html" %}
 </main>
 
 {% endblock %}

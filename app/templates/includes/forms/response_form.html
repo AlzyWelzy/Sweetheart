@@ -1,0 +1,14 @@
+<form action="" method="POST" class="proposalForm" id="proposalForm">
+  {% csrf_token %}
+
+  <input
+    type="hidden"
+    name="name"
+    class="form-control"
+    id="username"
+    value="{{ name }}"
+  />
+
+  <button type="submit" name="response" value="Yes" class="btn">❤️ Yes</button>
+  <button type="submit" name="response" value="No" class="btn">💔 No</button>
+</form>
