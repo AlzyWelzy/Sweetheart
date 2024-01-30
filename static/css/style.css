@@ -71,6 +71,10 @@ body {
   transition: transform 0.3s ease;
 }
 
+.btn-email {
+  margin-left: 0.5rem;
+}
+
 .btn:hover {
   background-color: #ff69b4;
   transform: scale(1.1);
