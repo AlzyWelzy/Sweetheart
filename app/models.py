@@ -20,6 +20,3 @@ class Proposal(models.Model):
 
     def __str__(self):
         return f"{self.name} said {self.response} at {self.timestamp} on {self.email}"
-
-
-admin.site.register(Proposal)
